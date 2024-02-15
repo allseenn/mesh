@@ -133,4 +133,71 @@
 
 Благодаря Nginx мы можем использовать всего лишь один открытый порт 443 и обернуть передаваемые данные и данные с систем визуализации в защищенное соединения, при этом используя только один общий сертификат безопасности.
 
+conf.d]# cat iot.conf 
+server {
+    listen 443 ssl;
+    server_name mosquitto-rrg-5471.gb-iot.ru;
+
+    location / {
+     proxy_http_version 1.1;    
+     proxy_pass http://192.168.1.8:8081;
+     proxy_set_header Upgrade $http_upgrade;
+     proxy_set_header Connection "upgrade";   
+     proxy_set_header Host $host;
+  }
+
+    ssl_certificate /etc/letsencrypt/live/gb-iot.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gb-iot.ru/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    listen 443 ssl;
+    server_name influxdb-rrg-5471.gb-iot.ru;
+    ssl_certificate /etc/letsencrypt/live/gb-iot.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gb-iot.ru/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+    location / {
+	proxy_set_header X-Forwarded-For $remote_addr;
+	proxy_pass http://192.168.1.8:8086;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name grafana-rrg-5471.gb-iot.ru;
+    ssl_certificate /etc/letsencrypt/live/gb-iot.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gb-iot.ru/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+    location / {
+	proxy_set_header X-Forwarded-For $remote_addr;
+	proxy_pass http://192.168.1.8:3000;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name nodered-rrg-5471.gb-iot.ru;
+    ssl_certificate /etc/letsencrypt/live/gb-iot.ru/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/gb-iot.ru/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+  location / {
+    proxy_pass http://192.168.1.8:1880;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+  }
+}
 
