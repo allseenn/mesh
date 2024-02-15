@@ -78,7 +78,7 @@
 
 Прежде всего дашборд нужно создать нажав на кнопку +Create Dashboard, в следующем окне нажимаем кнопку +Add visualization.
 
-В окне Select data source виберем наш бузу InfluxDB, кликнув по ней один раз.
+В окне Select data source виберем нашу базу InfluxDB, кликнув по ней один раз.
 
 <img src=pics/09.png>
 
