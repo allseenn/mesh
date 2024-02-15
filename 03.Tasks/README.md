@@ -25,8 +25,6 @@
 2. **IndluxDB2:** https://influxdb-rrg-5471.gb-iot.ru
 3. **Grafana:** https://grafana-rrg-5471.gb-iot.ru
 4. **NodeRed:** https://nodered-rrg-5471.gb-iot.ru
-   ru
-
 
 #### 1. Mosquitto
 
