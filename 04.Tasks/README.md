@@ -6,129 +6,169 @@
 
 ### Домашнее задание
 
-Прислать результаты выполненных запросов через Swagger UI и Postman.
+1. Прислать результаты выполненных запросов через Swagger UI
 
-Прислать скрипт на любом удобном языке программирования, где через API будут созданы 10 устройств (все переменные должны задаваться в коде, списком или массивом, но одной строкой), будет запрошена информация о 10 устройствах, будут обновлены имена 10 устройств, будут удалены 10 устройств.
+2. Postman
+
+3. Прислать скрипт на любом удобном языке программирования, где через API будут созданы 10 устройств (все переменные должны задаваться в коде, списком или массивом, но одной строкой), будет запрошена информация о 10 устройствах, будут обновлены имена 10 устройств, будут удалены 10 устройств.
 
 Желательно использовать Python через Google Collab. Для сдачи ДЗ студент должен предоставить преподавателю ссылку с доступом к блокноту с кодом (перед отправкой ДЗ проверьте, что ссылка открывается в приватном режиме браузера).
 
 # Решение
 
-## Взаимодействие через браузер
-
-### ChirpStack
+## 1. Swagger UI
 
 <div style="page-break-after: always;"></div>
 
 
-#### Создание API-token
+### Создание API-token
 
 <img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/01.png?raw=true">
 
-#### Applications
+### Applications
 
 <img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/03.png?raw=true">
 
 <div style="page-break-after: always;"></div>
 
-### ChirpStack API
+### Swagger API
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/04.png?raw=true'>
 
-#### Bearer token
+### Bearer token
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/05.png?raw=true'>
 
-<div style="page-break-after: always;"></div>
 
-#### GET
+### GET
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/06.png?raw=true'>
 
 
-##### Responses
+#### Responses
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/07.png?raw=true'>
 
-#### POST
+### POST
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/10.png?raw=true'>
 
-##### Application id
+#### Application id
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/08.png?raw=true'>
 
-##### Device profile id
+#### Device profile id
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/09.png?raw=true'>
 
-##### DevEUI
+#### DevEUI
 
 Любое 64-битное значение в HEX: 0123456789abcdef
 
-##### Responses
+#### Responses
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/11.png?raw=true'>
 
-##### Result
+#### Result
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/12.png?raw=true'>
 
-#### PUT
+### PUT
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/13.png?raw=true'>
 
-
-##### Responses
+#### Responses
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/13.png?raw=true'>
 
-##### Result
+#### Result
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/14.png?raw=true'>
 
-<div style="page-break-after: always;"></div>
-
-#### DELETE
+### DELETE
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/15.png?raw=true'>
 
-
-##### Responses
+#### Responses
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/16.png?raw=true'>
 
-<div style="page-break-after: always;"></div>
 
-##### Result
+#### Result
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/17.png?raw=true'>
 
 
-#### POST Queue to real device
+### POST Queue to real device
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/19.png?raw=true'>
 
-<div style="page-break-after: always;"></div>
 
-##### Data to Base64
+#### Data to Base64
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/18.png?raw=true'>
 
-##### Responses
+#### Responses
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/20.png?raw=true'>
 
-<div style="page-break-after: always;"></div>
-
-##### Result
+#### Result
 
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/21.png?raw=true'>
 
-
 <img src='https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/22.png?raw=true'>
 
-## Взаимодействие с помощью Python
+## 2. Postman
+
+### GET
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/23.png?raw=true">
+
+#### Authorization
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/24.png?raw=true">
+
+#### Save & Send
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/25.png?raw=true">
+
+### POST
+
+#### Body
+
+RAW -> JSON
+
+#### Save & Send
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/26.png?raw=true">
+
+### PUT
+
+#### Body
+
+RAW -> JSON
+
+#### Save & Send
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/27.png?raw=true">
+
+### DELETE
+
+#### Save & Send
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/28.png?raw=true">
+
+### POST Downlink
+
+#### Save & Send
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/29.png?raw=true">
+
+#### Result in Grafana
+
+<img src="https://github.com/allseenn/mesh/blob/main/04.Tasks/pics/30.png?raw=true">
+
+## 3. Python
 
 ### Создание 10 устройств
 
@@ -213,6 +253,8 @@ for i in range(len(devicesList)):
 
 print(json.dumps(info(url, token, applicationId, devQuantity+1), indent=4))
 ```
+
+<div style="page-break-after: always;"></div>
 
 ### Удаление 10 устройств
 
