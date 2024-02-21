@@ -79,7 +79,7 @@
 
 Есть большое количество ПО для работы с wifi для андроида. Использовал и продолжаю переодически пользоваться швейцарским ножем в сетевой диагностики программой [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools).
 
-<img src=pics/03.png>
+<img src=pics/03.png width=300>
 
 В свое время приобрел профессиональную за 50 рублей ). 
 
