@@ -90,5 +90,5 @@
 
 #### WiFi Scaner
 
-<img src=pics/05.png with=300>
+<img src=pics/05.png width=300>
 
