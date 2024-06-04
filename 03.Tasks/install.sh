@@ -1,7 +1,7 @@
 #!/bin/bash
 USERNAME=admin
 PASSWORD=students
-DOMEN=FILL_IT!!!!!!!
+DOMEN=FILL IT !!!
 ORG=IoT
 BUCKET=IoT
 INFLUXDB_TOKEN="kFhczFje8dRm2SXK1V9Ds7xpcJTr6wVUS881KQoUQWE-QAfcg-S-6j1FvFiSvWW0wTPlmWHCvXf_JU1hRx5rZg=="
@@ -20,7 +20,7 @@ if [ -z "$DOCKER_VERSION" ] || [ "$(echo $DOCKER_VERSION | cut -d '.' -f1)" -lt 
 
     # Устанавливаем необходимые пакеты
     sudo apt-get update
-    sudo apt-get -y install ca-certificates wget curl gnupg 
+    sudo apt-get -y install ca-certificates wget curl gnupg catimg
 
     # Устанавливаем ключи и добавляем репозиторий Docker
     sudo install -m 0755 -d /etc/apt/keyrings
